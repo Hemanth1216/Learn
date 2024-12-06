@@ -1,0 +1,15 @@
+<aside>
+    <div>
+        <nav>
+            <ul>
+                <li *ngFor="let navOption of navBarOptions" class="center-items" (click)="onTabChange(navOption)">
+                    <a [routerLink]="navOption.route"
+                        [ngClass]="navOption.title === selectedTab ? 'active' : ''">
+                        <span><i [class]="navOption.icon"></i></span>
+                    </a>
+                    <span [ngClass]="navOption.title === selectedTab ? 'active-tab' : 'hide-active-tab'"></span>
+                </li>
+            </ul>
+        </nav>
+    </div>    
+</aside>

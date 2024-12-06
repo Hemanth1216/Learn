@@ -1,0 +1,20 @@
+<div class="h-100 home-layout">
+    <div class="row widget-row" cdkDropList
+        #list1="cdkDropList"
+        [cdkDropListData]="Widgets[0]"
+        [cdkDropListConnectedTo]="[list2]"
+        (cdkDropListDropped)="drop($event)">
+        <div class="col-md-3 home-widget center-a-div" *ngFor="let widget of Widgets[0]" cdkDrag>
+            <h6> {{ widget }}</h6>
+        </div>
+    </div>
+    <div class="row widget-row" cdkDropList
+        #list2="cdkDropList"
+        [cdkDropListData]="Widgets[1]"
+        [cdkDropListConnectedTo]="[list1]"
+        (cdkDropListDropped)="drop($event)">
+        <div class="col-md-3 home-widget center-a-div" *ngFor="let widget of Widgets[1]" cdkDrag>
+            <h6> {{ widget }}</h6>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,61 @@
+<div class="m-4">
+    <div>
+        <h5>Client Management</h5>
+    </div>
+    <div class="filter-row">
+        <div>
+            <i class="bi bi-funnel font-size-25"></i>
+        </div>
+        <button class="btn btn-primary ms-4" (click)="addClient()">Add</button>
+    </div>
+    <div class="table-decoration">
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th *ngFor="let tableHeader of tableHeaders; let i = index"
+                        (click)="sortOnTableHeader(tableHeader)">
+                            {{tableHeader}}
+                            <span *ngIf="tableHeader !== 'Actions'" class="sort-icon">
+                                <i *ngIf="isAscending" class="fa-duotone fa-solid fa-sort-up fa-sm"></i>
+                                <i *ngIf="!isAscending" class="fa-duotone fa-solid fa-sort-up fa-flip-vertical fa-sm"></i>
+                            </span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let tableRecord of UsersData">
+                        <td>
+                            {{tableRecord.id}}
+                        </td>
+                        <td>
+                            {{tableRecord.firstname}}
+                        </td>
+                        <td>
+                            {{tableRecord.lastname}}
+                        </td>
+                        <td>
+                            {{tableRecord.company}}
+                        </td>
+                        <td>
+                            {{tableRecord.project}}
+                        </td>
+                        <td>
+                            {{tableRecord.tech}}
+                        </td>
+                        <td>
+                            {{tableRecord.role}}
+                        </td>
+                        <td>
+                            {{tableRecord.salary}}
+                        </td>
+                        <td>
+                            <i class="bi bi-pencil-square ms-1" (click)="editClient(tableRecord)"></i>
+                            <i class="bi bi-trash3 ms-2" (click)="deleteClient(tableRecord.firstname)"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

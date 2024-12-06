@@ -1,0 +1,53 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title fs-5">
+            New Client Details
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="add-client-toogle" aria-label="Close" (click)="onModalClose()"></button>
+    </div>
+    <form [formGroup]="clientForm" (ngSubmit)="onAddClientSubmit()">
+        <div class="modal-body ms-3 me-3">
+            <div class="row">
+                <div class="col-md-6 input-container">
+                    <label for="fname" class="ms-1">First Name</label>
+                    <input tye="text" id="fname" formControlName="firstName" placeholder="First Name">
+                </div>
+                <div class="col-md-6 input-container">
+                    <label for="lname">Last Name</label>
+                    <input tye="text" id="lname" formControlName="lastName" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 input-container">
+                    <label for="organization">Organization</label>
+                    <input tye="text" id="organization" formControlName="organization" placeholder="Organization">
+                </div>
+                <div class="col-md-6 input-container">
+                    <label for="project">Project</label>
+                    <input tye="text" id="project" formControlName="project" placeholder="Project">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 input-container">
+                    <label for="tech">Tech Stack</label>
+                    <input tye="text" id="tech" formControlName="techStack" placeholder="Tech Stack">
+                </div>
+                <div class="col-md-6 input-container">
+                    <label for="role">Role</label>
+                    <input tye="text" id="role" formControlName="role" placeholder="Role">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 input-container">
+                    <label for="pay">Pay</label>
+                    <input tye="text" id="pay" formControlName="pay" placeholder="pay">
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="add-client-toogle" (click)="onModalClose()">Close</button>
+            <button *ngIf="mode === 'add'" type="submit" class="btn btn-primary">Add</button>
+            <button *ngIf="mode === 'edit'" type="submit" class="btn btn-primary">Update</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,239 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0px !important;
+    background-color: #e9e9e9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.5;
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+}
+
+i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+aside {
+    width: 60px;
+    height: 100%;
+    padding: 0;
+    position: fixed;
+    background-color: #002f60;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+    margin-top: 53px;
+    border: 1px solid black;
+    border-top: none;
+}
+
+aside nav {
+    padding: 0;
+    margin: 0;
+    background-color: #002f60;
+}
+
+aside nav > ul {
+    padding: 15px 0 0;
+    margin: 0;
+}
+
+aside nav ul > li {
+    height: 46px;
+    padding: 0;
+    margin: 0 0 1px;
+    list-style: none;
+    position: relative;
+}
+
+nav ul li > a {
+    color: #fff;
+    opacity: 0.4;
+}
+
+nav ul li > a.active {
+    opacity: 1;
+    /* font-weight: ; */
+}
+
+.main-content {
+    margin-left: 60px;
+    padding: 10px;
+    height: 90vh;
+    position: relative;
+    top: 52px;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 9;
+}
+
+.header-border {
+    border: 1px solid black;
+}
+
+.hamburger-menu {
+    width: 60px;
+    height: 52px;
+    float: left;
+    text-align: center;
+    border-right: 1px solid #e4e4e4;
+    cursor: pointer;
+    margin: 0;
+    padding-top: 17px;
+}
+
+.heading-head {
+    width: calc(100vw - 250px);
+    float: left;
+    margin-left: 0;
+    text-align: center;
+}
+
+.profile {
+    margin: 15px 30px;
+    gap: 25px;
+}
+
+.profile-icon {
+    font-size: 30px;
+    margin: -12px;
+    cursor: pointer;
+}
+
+li.center-items {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+li .active-tab{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0.2rem;
+    height: 100%;
+    background: white;
+}
+
+
+li .hide-active-tab {
+    display: hidden;
+}
+
+.font-size-25 {
+    font-size: 25px;
+}
+
+/* --------------------- */
+/* table styles */
+/* --------------------- */
+
+table {
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    padding: 10px;
+}
+
+th {
+    background-color: #002f60;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+div .table-decoration {
+    padding: 10px;
+    box-shadow: 0px 0px 5px 5px #ddd;
+    border-radius: 5px;
+    overflow: auto;
+    background-color: #fff;
+}
+
+.filter-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    align-items: center;
+}
+
+/* input box styles */
+
+input {
+    height: 35px;
+    border: 1px solid #babbbb;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 10px;
+}
+
+input:focus {
+    border-color: orange;
+    box-shadow: 0px 0px 3px orange;
+}
+
+input::placeholder {
+    opacity: 0.3;
+}
+
+label {
+    font-size: 14px !important;
+    margin-bottom: 0.3rem;
+    color: #2E2F2F;
+    display: inline-block;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column; 
+    margin: 10px 0px;
+}
+
+/* ------------------------------- */
+
+.sort-icon {
+    float: right;
+}
+
+.row {
+    --bs-gutter-x: 0;
+}
+
+.home-widget {
+    box-shadow: 0px 0px 5px;
+    border-radius: 5px;
+}
+
+.home-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin: 60px 20px 30px 20px;
+}
+
+.widget-row {
+    height: 30vh;
+    display: flex;
+    gap: 58px;
+}
+
+.center-a-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
