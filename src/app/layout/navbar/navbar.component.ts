@@ -1,6 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NavBar } from './navbar.interface';
-import { ActivatedRoute, Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -17,12 +16,11 @@ export class NavbarComponent implements OnInit, OnDestroy{
   ];
   selectedTab: string = '';
 
-  constructor(private activatedRoute: ActivatedRoute, private router: Router) {
+  constructor() {
     
   }
 
   ngOnInit() {
-    
   }
 
   onTabChange(selectedNavOption: NavBar) {
