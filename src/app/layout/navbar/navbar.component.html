@@ -3,7 +3,7 @@
         <nav>
             <ul>
                 <li *ngFor="let navOption of navBarOptions" class="center-items" (click)="onTabChange(navOption)">
-                    <a [routerLink]="navOption.route"
+                    <a [routerLink]="navOption.route" routerLinkActive="active"
                         [ngClass]="navOption.title === selectedTab ? 'active' : ''">
                         <span><i [class]="navOption.icon"></i></span>
                     </a>
