@@ -21,7 +21,6 @@ export class NavbarComponent implements OnInit, OnDestroy{
   }
 
   ngOnInit() {
-    this.selectedTab = this.navBarOptions[0].title;
   }
 
   onTabChange(selectedNavOption: NavBar) {
